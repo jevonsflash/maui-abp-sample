@@ -13,16 +13,16 @@ namespace MauiBoilerplate.Core.Entities
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public override long Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="歌曲名称必须填写")]
         [StringLength(6, ErrorMessage = "歌曲名称要在6个字以内")]
         public string MusicTitle { get; set; }
 
-        [Required]
-        [StringLength(10, ErrorMessage = "歌曲名称要在10个字以内")]
+        [Required(ErrorMessage = "艺术家必须填写")]
+        [StringLength(10, ErrorMessage = "艺术家要在10个字以内")]
         public string Artist { get; set; }
 
-        [Required]
-        [StringLength(10, ErrorMessage = "歌曲名称要在10个字以内")]
+        [Required(ErrorMessage = "专辑名必须填写")]
+        [StringLength(10, ErrorMessage = "专辑名要在10个字以内")]
         public string Album { get; set; }
 
         public TimeSpan Duration { get; set; }

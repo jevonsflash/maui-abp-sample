@@ -30,7 +30,7 @@ public partial class MusicItemPage : ContentPageBase, ITransientDependency
 
     private async void MusicItemPageViewModel_OnValidateErrors(object sender, List<System.ComponentModel.DataAnnotations.ValidationResult> e)
     {
-        var content = string.Join(',', e);
+        var content = string.Join("\r\n", e);
         await DisplayAlert("Çë×¢Òâ", content, "ºÃµÄ");
     }
 }

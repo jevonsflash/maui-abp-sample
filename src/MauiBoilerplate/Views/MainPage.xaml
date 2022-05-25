@@ -65,18 +65,18 @@
                             <StackLayout Grid.Column="0" 
                                              HorizontalOptions="Center" 
                                              VerticalOptions="CenterAndExpand">
-                                <Label Text="{Binding MusicTitle}" 
-                                       TextColor="{x:StaticResource A}"
-                                               HorizontalOptions="FillAndExpand" 
-                                               HorizontalTextAlignment="Center" 
-                                               FontSize="Body" 
-                                                />
+                                <Label 
+                                    Text="{Binding MusicTitle}"                                    
+                                    HorizontalOptions="FillAndExpand" 
+                                    HorizontalTextAlignment="Center" 
+                                    FontSize="Body" 
+                                    />
                                 <Label
-                                               Text="{Binding Artist}" 
-                                               HorizontalOptions="FillAndExpand" 
-                                               HorizontalTextAlignment="Center" 
-                                               FontSize="Body" 
-                                               TextColor="{DynamicResource PhoneChromeBrush}" />
+                                    Text="{Binding Artist}" 
+                                    HorizontalOptions="FillAndExpand" 
+                                    HorizontalTextAlignment="Center" 
+                                    FontSize="Body" 
+                                    />
                             </StackLayout>
                             <Button 
                                 x:Name="MoreButton"

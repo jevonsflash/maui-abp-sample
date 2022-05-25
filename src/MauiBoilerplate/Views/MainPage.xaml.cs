@@ -33,23 +33,19 @@ public partial class MainPage : ContentPageBase, ITransientDependency
         string action = await DisplayActionSheet(currentsong.MusicTitle, "取消", null, "修改", "删除");
         if (action=="修改")
         {
-
             musicItemPageViewModel.CurrentSong  = currentsong;
             await Navigation.PushModalAsync(musicItemPage);
-
         }
         else if (action=="删除")
         {
             mainPageViewModel.DeleteCommand.Execute(currentsong);
             mainPageViewModel.RefreshCommand.Execute(null);
         }
-
     }
 
     private async void AddButton_Clicked(object sender, EventArgs e)
     {
         musicItemPageViewModel.CurrentSong  = new Song();
-
         await Navigation.PushModalAsync(musicItemPage);
     }
 }
