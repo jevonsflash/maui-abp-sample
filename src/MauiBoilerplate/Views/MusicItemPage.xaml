@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mato:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mato="clr-namespace:MauiBoilerplate;assembly=MauiBoilerplate.Core"
+             x:Class="MauiBoilerplate.MusicItemPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="155"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="基础">
+                    <EntryCell Label="标题"   Text="{Binding CurrentSong.MusicTitle, Mode=TwoWay}"/>
+                    <EntryCell  Label="艺术家"  Text="{Binding CurrentSong.Artist, Mode=TwoWay}"/>
+                    <EntryCell  Label="专辑"  Text="{Binding CurrentSong.Album, Mode=TwoWay}"/>
+
+                </TableSection>
+                <TableSection Title="其他">
+                    <EntryCell  Label="时长"  Text="{Binding CurrentSong.Duration}"/>
+                    <EntryCell  Label="发布日期"  Text="{Binding CurrentSong.ReleaseDate}"/>
+                </TableSection>
+
+            </TableRoot>
+        </TableView>
+        <Button x:Name="CommitButton"
+                Grid.Row="1"
+                CornerRadius="100"
+                HeightRequest="44"
+                WidthRequest="200"
+                Text=""
+                Command="{Binding CommitCommand}"
+                FontFamily="FontAwesome"             
+                HorizontalOptions="Center" />
+    </Grid>
+</mato:ContentPageBase>

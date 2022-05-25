@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+	<texts>
+		<text name="Song">Song</text>
+		<text name="Theme">Theme</text>
+
+	</texts>
+</localizationDictionary>

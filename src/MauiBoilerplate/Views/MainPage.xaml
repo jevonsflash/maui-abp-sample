@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mato:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mato="clr-namespace:MauiBoilerplate;assembly=MauiBoilerplate.Core"
+             x:Class="MauiBoilerplate.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="155"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Text="My Music" FontSize="65"></Label>
+        <ListView 
+                Grid.Row="1"
+                ItemsSource="{Binding Songs,Mode=TwoWay}"
+                x:Name="MainListView"
+                RowHeight="74" 
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="{Binding IsRefreshing}"
+                RefreshCommand="{Binding RefreshCommand}"
+                SelectedItem="{Binding CurrentSong,Mode=TwoWay}">
+            <ListView.Header>
+                <Grid HeightRequest="96">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+
+                    <Button Clicked="AddButton_Clicked"
+                            CornerRadius="100"
+                            Text=""
+                            HeightRequest="44"
+                            WidthRequest="200"
+                            FontFamily="FontAwesome"
+                                ></Button>
+
+
+                    <StackLayout VerticalOptions="End"
+                                 Margin="0,0,0,8"
+                                 Grid.Row="1"
+                                 HorizontalOptions="Center"
+                                 Orientation="Horizontal">
+                        <Label HorizontalTextAlignment="Center"
+                            FontSize="Small" 
+                            Text="{Binding Songs.Count}"></Label>
+                        <Label  HorizontalTextAlignment="Center"
+                            FontSize="Small" 
+                            Text="首歌"></Label>
+
+                    </StackLayout>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid x:Name="ModeControlLayout" 
+                              VerticalOptions="CenterAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+
+                            <StackLayout Grid.Column="0" 
+                                             HorizontalOptions="Center" 
+                                             VerticalOptions="CenterAndExpand">
+                                <Label Text="{Binding MusicTitle}" 
+                                       TextColor="{x:StaticResource A}"
+                                               HorizontalOptions="FillAndExpand" 
+                                               HorizontalTextAlignment="Center" 
+                                               FontSize="Body" 
+                                                />
+                                <Label
+                                               Text="{Binding Artist}" 
+                                               HorizontalOptions="FillAndExpand" 
+                                               HorizontalTextAlignment="Center" 
+                                               FontSize="Body" 
+                                               TextColor="{DynamicResource PhoneChromeBrush}" />
+                            </StackLayout>
+                            <Button 
+                                x:Name="MoreButton"
+                                HeightRequest="44" 
+                                WidthRequest="44" 
+                                Margin="10"
+                                Text=""
+                                Clicked="SongMoreButton_OnClicked"
+                                FontFamily="FontAwesome"
+                                Grid.Column="1" 
+                                CornerRadius="100"
+                                HorizontalOptions="Center" />
+
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</mato:ContentPageBase>

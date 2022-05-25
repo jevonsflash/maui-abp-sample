@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="zh-Hans">
+	<texts>
+		<text name="Song">歌曲</text>
+		<text name="Theme">主题</text>
+		
+	</texts>
+</localizationDictionary>
+
+
