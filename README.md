@@ -4,6 +4,10 @@
 
 todo: MauiBoilerplate 项目
 
+## 截屏
+![截屏](https://user-images.githubusercontent.com/11273359/170831154-44f74aec-4e1f-41d4-b766-4efc24695dd0.png)
+
+
 ## 博客 
 [将Abp移植进.NET MAUI项目（一）：搭建项目](https://blog.csdn.net/jevonsflash/article/details/124859858).
 
