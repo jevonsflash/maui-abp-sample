@@ -1,4 +1,4 @@
-using Abp.Dependency;
+ï»¿using Abp.Dependency;
 using MauiBoilerplate.Core.Entities;
 using MauiBoilerplate.ViewModels;
 
@@ -30,13 +30,13 @@ public partial class MainPage : ContentPageBase, ITransientDependency
     private async void SongMoreButton_OnClicked(object sender, EventArgs e)
     {
         var currentsong = (sender as BindableObject).BindingContext as Song;
-        string action = await DisplayActionSheet(currentsong.MusicTitle, "È¡Ïû", null, "ĞŞ¸Ä", "É¾³ı");
-        if (action=="ĞŞ¸Ä")
+        string action = await DisplayActionSheet(currentsong.MusicTitle, "å–æ¶ˆ", null, "ä¿®æ”¹", "åˆ é™¤");
+        if (action=="ä¿®æ”¹")
         {
             musicItemPageViewModel.CurrentSong  = currentsong;
             await Navigation.PushModalAsync(musicItemPage);
         }
-        else if (action=="É¾³ı")
+        else if (action=="åˆ é™¤")
         {
             mainPageViewModel.DeleteCommand.Execute(currentsong);
             mainPageViewModel.RefreshCommand.Execute(null);

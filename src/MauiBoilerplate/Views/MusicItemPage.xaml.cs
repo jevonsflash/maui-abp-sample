@@ -1,4 +1,4 @@
-using Abp.Dependency;
+ï»¿using Abp.Dependency;
 using MauiBoilerplate.Core.Entities;
 using MauiBoilerplate.ViewModels;
 
@@ -31,6 +31,6 @@ public partial class MusicItemPage : ContentPageBase, ITransientDependency
     private async void MusicItemPageViewModel_OnValidateErrors(object sender, List<System.ComponentModel.DataAnnotations.ValidationResult> e)
     {
         var content = string.Join("\r\n", e);
-        await DisplayAlert("Çë×¢Òâ", content, "ºÃµÄ");
+        await DisplayAlert("è¯·æ³¨æ„", content, "å¥½çš„");
     }
 }
