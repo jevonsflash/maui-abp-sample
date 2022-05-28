@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <mato:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mato="clr-namespace:MauiBoilerplate;assembly=MauiBoilerplate.Core"
@@ -28,7 +28,7 @@
 
 
                     <Button Clicked="AddButton_Clicked"
-                            CornerRadius="100"
+                            CornerRadius="22"
                             Text=""
                             HeightRequest="44"
                             WidthRequest="200"
@@ -87,7 +87,7 @@
                                 Clicked="SongMoreButton_OnClicked"
                                 FontFamily="FontAwesome"
                                 Grid.Column="1" 
-                                CornerRadius="100"
+                                CornerRadius="22"
                                 HorizontalOptions="Center" />
 
                         </Grid>
